@@ -2,15 +2,11 @@
 
 /* 1. Global Reset & Variables */ 
 :root { 
-    /* --menu-text-color: #717171;  */
     --menu-text-color: #886c5f;
     --color-white: #f4edebfc;
     --color-grey: #c6bab7;
     --accent-color: #fca01f;
-    /* --bg-color: rgb(251, 168, 181); */
     --bg-color: rgb(251, 168, 181);
-    /* --bg-color: red; */
-    /* --text-color: rgb(166, 26, 26);  */
     --color-1: #ffe44e;
     --color-2: #ffcb20;
     --color-3: #d67c15;
@@ -32,8 +28,6 @@ html, body {
     background-color: var(--bg-color);
     margin: 0;
     padding: 0;
-    /* height: 100vh; */
-    /* overflow: hidden; */
 }
 
 body {
@@ -43,12 +37,6 @@ body {
 }
 
 main {
-    /* min-height: 100vh;
-    display: flex;
-    flex-direction: column; */
-    /* display: flex;
-    flex-direction: column;
-    min-height: calc(100vh - 60px); */
     margin-top: 5px;
     display: flex;
     flex-direction: column;
@@ -81,10 +69,8 @@ p {
     display: flex;
     justify-content: space-between; 
     align-items: center;
-    /* margin: 0 auto; */
     padding: 10px;
     width: 80%;
-    /* background-color: white;  */
     background-color: var(--color-white); 
     white-space: nowrap;
     border-radius: 0px 0px 8px 8px;
@@ -99,7 +85,6 @@ header .navigation li {
     list-style: none;
     margin-left: 30px;
     margin-right: 30px;
-    /* Smooth transition */
     transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
@@ -108,8 +93,6 @@ header .navigation li {
     opacity: 0;
     transform: translateY(-10px);
     pointer-events: none;
-    /* or If you'd rather they fully collapse and not take space: */
-    /* display: none; */
 }
 
 header .navigation li a,
@@ -119,8 +102,6 @@ header .navigation li a,
     color: var(--menu-text-color);
     font-weight: 400;
     letter-spacing: 1%;
-    /* adding swell */
-    /* font-size: 18px; */
     font-size: 1.2rem;
     transition: transform 0.4s ease, font-size 0.4s ease; 
 }
@@ -128,7 +109,7 @@ header .navigation li a,
 .socials {
     display: flex;
     gap: 10px;
-    flex-shrink: 0; /* prevents squishing */
+    flex-shrink: 0;
 }
 
 .navigation {
@@ -140,14 +121,6 @@ header .navigation li a,
     transition: transform 0.4s ease, font-size 0.4s ease;
 }
 
-/* adding swell for social icons */
-/* .menu.contact-active {
-  padding: 20px 60px;
-}
-
-.menu.contact-active .socials i {
-  transform: scale(1.6);
-} */
 .header-box {
     transition: padding 0.4s ease;
 }
@@ -204,19 +177,6 @@ header .navigation li a,
     display: none; 
 }
 
-/* .content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-} */
-
-/* main {
-    min-height: 100vh;
-    display: flex; 
-    flex-direction: column;
-} */
-
 .content h1,
 .content h3 {
     display: block;
@@ -234,22 +194,12 @@ header .navigation li a,
 
 
 .bio {
-    /* margin: 0px 50px; */
-    /* min-height: 70vh; */
-    /* padding: 4rem 0; */
-    /* flex: 1; */
     display: flex;
     align-items: center;
     padding: 2rem 50px;
 }
 
 .testimonials {
-    /* margin: 0px 50px; */
-    /* min-height: 70vh; */
-    /* padding: 4rem 0; */
-    /* flex: 1; */
-    /* display: inline-block; */
-    /* align-items: center; */
     padding: 2rem 50px;
 }
 
@@ -257,12 +207,9 @@ header .navigation li a,
     border-radius: 50%;
     object-fit: cover;
     width: 100%;
-    /* width: 100%;
-    max-height: 50vh; */
 }
 
 .worked-with {
-    /* background-color: rgb(209, 209, 209); */
     background-color: var(--color-grey);
     width: 80%;
     margin: 0 auto 30px auto;
@@ -274,7 +221,6 @@ header .navigation li a,
 
 .companies {
     overflow: hidden;
-    /* position: relative; */
 
     /* Edge fade */
     -webkit-mask-image: linear-gradient(
@@ -300,12 +246,9 @@ header .navigation li a,
 
 .companies a {
     font-size: 40px;
-    /* removing to replace with gradient color effect */
     color: var(--menu-text-color);
     text-decoration: none;
     margin: 0 20px;
-    /* added for scroll effect */
-    /* display: flex; */
     width: 100%;
     align-content: center;
     padding: 10px;
@@ -313,18 +256,9 @@ header .navigation li a,
 }
 
 .companies a:hover {
-    /* transform: scale(1.15);
-    filter: brightness(1.2); */
-
     opacity: 1;
     transform: scale(1.15) translateY(-3px);
     filter: brightness(1.1);
-}
-
-.companies a i {
-    /* transition: transform 0.3s ease, opacity 0.3s ease; */
-    /* color: inherit; */
-    /* color: white; */
 }
 
 .companies:hover a {
@@ -335,16 +269,6 @@ header .navigation li a,
     opacity: 1;
 }
 
-.companies a:hover i {
-    /* transform: scale(1.15); */
-
-    /* filter: brightness(1.2);
-    transform: scale(1.15) translateY(-3px); */
-
-    /* opacity: 1; */
-    /* transform: scale(1.15); */
-}
-
 .scroll-track {
     will-change: transform;
     display: flex;
@@ -352,14 +276,6 @@ header .navigation li a,
     width: max-content;
     animation: scroll 60s linear infinite;
     pointer-events: auto;
-
-    /* -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent; */
-
-    /* background: inherit;     */
-
-    /* mix-blend-mode: multiply; */
 }
 
 .scroll-track:hover {
@@ -402,14 +318,9 @@ header .navigation li a,
     display: flex;
     align-items: center;
     padding: 2rem 50px;
-
-    /* height: 70vh; */
     }
 
     .row {
-        /* gap: 3em;
-        width: 100%;
-        padding: 50px 0px; */
         gap: 2em;
         width: 100%;
         padding: 20px 0px;
@@ -421,9 +332,6 @@ header .navigation li a,
     }
 
     .testimonials .row {
-        /* gap: 3em;
-        width: 100%;
-        padding: 50px 0px; */
         gap: 2em;
         width: 100%;
         padding: 20px 0px;
@@ -440,7 +348,6 @@ header .navigation li a,
 
     html, body {
         font-family: "Nunito", sans-serif;
-        /* background-color: blue; */
         margin: 0;
         padding: 0;
         overflow: auto;
@@ -473,9 +380,6 @@ header .navigation li a,
     }
   
     .row {
-        /* gap: 3em;
-        width: 100%;
-        padding: 50px 0px; */
         gap: 2em;
         width: 100%;
         padding: 20px 0px;
@@ -487,7 +391,6 @@ header .navigation li a,
     }
 
     .row .col50 .imgbx {
-        /* height: 50vh; */
         height: auto;
     } 
 }
@@ -497,7 +400,6 @@ header .navigation li a,
 
     html, body {
         font-family: "Nunito", sans-serif;
-        /* background-color: purple; */
         margin: 0;
         padding: 0;
     }
@@ -505,18 +407,15 @@ header .navigation li a,
     .bio {
         margin: 0;
         padding: 30px;
-        /* padding-top: 50px; */
     }
 
     .row .col50 .imgbx {
         padding: 10px;
         height: auto;
-        /* display: flex; */
     } 
 
     .worked-with {
         padding: 10px;
-        /* margin: 50px; */
         margin: 20px auto;
         border-radius: 16px;
         width: 80%;
