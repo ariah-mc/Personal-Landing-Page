@@ -1,4 +1,4 @@
-#GENERAL NAVIGATION:#  
+# GENERAL NAVIGATION:  
 The site consists of the main landing page which is made up of three main blocks: header/navbar, hero/bio, Worked with.  
   
 The header/navbar and Work with section will appear on all pages other than the Recent Work pages (main Recent Work page and children)  
@@ -10,14 +10,14 @@ There is a "Testimonials" page that's a simple row layout with formatted quote a
 The "Get In Touch" link in the navbar stays on the main landing page, but makes the social media icons in the header swell, pushing the navbar out to fit along with them.  There is then a "click anywhere" script that returns the socials and header to normal state  
   
   
-#COLOR PALETTE:#  
+# COLOR PALETTE:  
 I wanted to practice coordinating the color palette across the site and using variables to easily update color classes(?) site-wide, so I found the extension "macOS Color Picker" for VS Code to use its eyedropper tool so I could sample the colors from the profile picture (had some fun making the background color a sample of Brad Pitt's skin tone, his blazer color is the hover color for the socials, the socials themselves are sampled from the sunset behind Brad, the header, text, and Worked with colors are sampled from Brad's hair and beard)  
   
-#ANT MARCH:#  
+# ANT MARCH:  
 The Worked with section in the Figma looked to be begging to have an ant march, so, since I'd never done one, I had chat help me with this, it took some tweaking, the params that it had by default didn't look good, but I'm pretty happy with how I got it looking in the end.  There are a couple problems with it that I couldn't fix, listed below   
   
   
-#BUGS & FUTURE IMPLEMENTATION:#  
+# BUGS & FUTURE IMPLEMENTATION:  
 1. Ant march: there's a jump in the loop at the end of the first list of icons, when it restarts on the second list - it seems to be due to some padding on the first item in the loop, which is also making the space between the last item of the one list and the first of the next bigger than it's supposed to be  
   
   
