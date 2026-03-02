@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ariah McKee</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css" class="styles">
+    <script src="https://kit.fontawesome.com/4032d748f7.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header class="header">
+
+        <div class="header-box">
+
+            <!-- Hamburger Icon for Mobile View -->
+            <i class="fas fa-bars menu-toggle" onclick="toggleMenu()"></i>
+
+            <!-- is this where the nav tag should be or should it be where the header-box div is?  -->
+            <nav id="menu" class="menu">
+                <ul class="navigation">
+                    <li><a href="index.html#">Home</a></li>
+                    <li><a href="index.html#worked-with">Recent Work</a></li>
+                    <li><a href="testimonials.html">Testimonials</a></li>
+                    <li><a href="#" id="contact-trigger">Get In Touch</a></li>
+                </ul>
+            </nav>
+
+            <div class="socials">
+                <a class="color-1" href="https://www.facebook.com"><i class="fab fa-facebook"></i></a>
+                <a class="color-2" href="https://www.youtube.com"><i class="fa-brands fa-youtube"></i></a>
+                <a class="color-3" href="https://www.x.com"><i class="fa-brands fa-x"></i></a>
+                <a class="color-4" href="https://www.instagram.com"><i class="fa-brands fa-instagram"></i></a>         
+            </div>
+        </div>
+        
+    </header>
+
+    <main class="content">
+        <article class="testimonials">
+
+            <div class="row">
+                <div class="col50">
+                    <div class="testimonial-content">
+                        <p class="testimonial-text">"Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus eveniet ad aspernatur quam voluptatem nobis molestiae? Debitis ad eaque assumenda officiis."</p>
+                        <h3 class="testimonial-name">- First Last, Title, Company</h3>
+                    </div>
+                </div>
+
+                <div class="col50">
+                    <div class="testimonial-content">
+                        <p class="testimonial-text">"Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint nobis consequuntur, veritatis sit veniam dolore libero nostrum quisquam esse. Reprehenderit consequuntur nam eum!"</p>
+                        <h3 class="testimonial-name">- First Last, Title, Company</h3>
+                    </div>
+                </div>
+
+                <div class="col50">
+                    <div class="testimonial-content">
+                        <p class="testimonial-text">"Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet quasi earum delectus debitis natus iusto? Mollitia cum, dolorem quos velit officiis doloremque nostrum maxime perspiciatis cupiditate unde, nobis alias quam delectus a commodi voluptatem reiciendis?"</p>
+                        <h3 class="testimonial-name">- First Last, Title, Company</h3>
+                    </div>
+                </div>
+
+            </div>
+
+        </article>
+
+        <article id="worked-with"class="worked-with">
+            <p>Worked with</p>
+
+            <div class="companies">
+                <div class="scroll-track">
+                    <div class="set">
+                        <a href="https://www.android.com"><i class="fa-brands fa-android"></i></a>
+                        <a href="https://www.apple.com"><i class="fa-brands fa-apple"></i></a>
+                        <a href="https://www.amazon.com"><i class="fa-brands fa-amazon"></i></a>
+                        <a href="https://www.xbox.com"><i class="fa-brands fa-xbox"></i></a> 
+                        <a href="https://www.aws.com"><i class="fa-brands fa-aws"></i></a>
+                        <a href="https://www.cloudflare.com"><i class="fa-brands fa-cloudflare"></i></a>
+                        <a href="https://www.playstation.com"><i class="fa-brands fa-playstation"></i></a>
+                        <a href="https://www.zoom.com"><i class="fa-brands fa-zoom"></i></a>
+                        <a href="https://www.lyft.com"><i class="fa-brands fa-lyft"></i></a>
+                        <a href="https://www.airbnb.com"><i class="fa-brands fa-airbnb"></i></a>
+                    </div>
+
+                    <div class="set">
+                        <a href="https://www.android.com"><i class="fa-brands fa-android"></i></a>
+                        <a href="https://www.apple.com"><i class="fa-brands fa-apple"></i></a>
+                        <a href="https://www.amazon.com"><i class="fa-brands fa-amazon"></i></a>
+                        <a href="https://www.xbox.com"><i class="fa-brands fa-xbox"></i></a> 
+                        <a href="https://www.aws.com"><i class="fa-brands fa-aws"></i></a>
+                        <a href="https://www.cloudflare.com"><i class="fa-brands fa-cloudflare"></i></a>
+                        <a href="https://www.playstation.com"><i class="fa-brands fa-playstation"></i></a>
+                        <a href="https://www.zoom.com"><i class="fa-brands fa-zoom"></i></a>
+                        <a href="https://www.lyft.com"><i class="fa-brands fa-lyft"></i></a>
+                        <a href="https://www.airbnb.com"><i class="fa-brands fa-airbnb"></i></a>
+                    </div>
+                </div>
+            </div>
+
+        </article>
+
+    </main>
+
+    <!-- ant march pauser -->
+    <script>
+    const scrollTrack = document.querySelector('.scroll-track');
+
+    scrollTrack.addEventListener('touchstart', () => {
+    scrollTrack.style.animationPlayState = 'paused';
+    });
+
+    scrollTrack.addEventListener('touchend', () => {
+    scrollTrack.style.animationPlayState = 'running';
+    });
+    </script>
+
+    <!-- script for toggling the nav menu when swelling socials -->
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById("menu");
+            menu.classList.toggle("active");
+        }
+        // Close menu when any navigation link is clicked
+        document.querySelectorAll("#menu a").forEach(link => {
+            link.addEventListener("click", () => {
+            const menu = document.getElementById("menu");
+            menu.classList.remove("active");
+            });
+        });
+    </script>
+
+    <!-- script to click anywhere to close, for social swell -->
+    <script>
+        const trigger = document.getElementById("contact-trigger");
+        const headerBox = document.querySelector(".header-box");
+
+        trigger.addEventListener("click", function(e) {
+        e.preventDefault();
+        e.stopPropagation(); // prevent immediate close
+        headerBox.classList.toggle("contact-active");
+        });
+
+        // Click anywhere else closes it
+        document.addEventListener("click", function(e) {
+        if (!headerBox.contains(e.target)) {
+            headerBox.classList.remove("contact-active");
+        }
+        });
+    </script>
+
+</body>
+
+</html>

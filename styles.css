@@ -1,0 +1,527 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+/* 1. Global Reset & Variables */ 
+:root { 
+    /* --menu-text-color: #717171;  */
+    --menu-text-color: #886c5f;
+    --color-white: #f4edebfc;
+    --color-grey: #c6bab7;
+    --accent-color: #fca01f;
+    /* --bg-color: rgb(251, 168, 181); */
+    --bg-color: rgb(251, 168, 181);
+    /* --bg-color: red; */
+    /* --text-color: rgb(166, 26, 26);  */
+    --color-1: #ffe44e;
+    --color-2: #ffcb20;
+    --color-3: #d67c15;
+    --color-4: #ac4f14;
+    --eye-color: #61676d;
+} 
+/* --------------------------- */
+
+
+* {
+    box-sizing: border-box;
+    padding:0;
+    margin:0;
+    scroll-behavior: smooth;
+}
+
+html, body {
+    font-family: "Nunito", sans-serif;
+    background-color: var(--bg-color);
+    margin: 0;
+    padding: 0;
+    /* height: 100vh; */
+    /* overflow: hidden; */
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    /* min-height: 100vh;
+    display: flex;
+    flex-direction: column; */
+    /* display: flex;
+    flex-direction: column;
+    min-height: calc(100vh - 60px); */
+    margin-top: 5px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+h1,
+h3 {
+    padding: 0 20px;
+    color: var(--text-color);
+}
+
+p {
+    padding: 0 20px;
+    font-weight: 400;
+    font-size: 18px;
+    color: var(--text-color);
+}
+
+.testimonial-text {
+    font-style: italic;
+}
+
+.header-box {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    /* margin: 0 auto; */
+    padding: 10px;
+    width: 80%;
+    /* background-color: white;  */
+    background-color: var(--color-white); 
+    white-space: nowrap;
+    border-radius: 0px 0px 8px 8px;
+}
+
+header .navigation { 
+    display: flex;
+    position: relative;
+}
+
+header .navigation li {
+    list-style: none;
+    margin-left: 30px;
+    margin-right: 30px;
+    /* Smooth transition */
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* Hide all except first item when active */
+.header-box.contact-active .navigation li:not(:first-child) {
+    opacity: 0;
+    transform: translateY(-10px);
+    pointer-events: none;
+    /* or If you'd rather they fully collapse and not take space: */
+    /* display: none; */
+}
+
+header .navigation li a,
+.socials,
+.socials a {
+    text-decoration: none;
+    color: var(--menu-text-color);
+    font-weight: 400;
+    letter-spacing: 1%;
+    /* adding swell */
+    /* font-size: 18px; */
+    font-size: 1.2rem;
+    transition: transform 0.4s ease, font-size 0.4s ease; 
+}
+
+.socials {
+    display: flex;
+    gap: 10px;
+    flex-shrink: 0; /* prevents squishing */
+}
+
+.navigation {
+  flex: 1;
+}
+
+.socials i {
+    font-size: 1.2rem;
+    transition: transform 0.4s ease, font-size 0.4s ease;
+}
+
+/* adding swell for social icons */
+/* .menu.contact-active {
+  padding: 20px 60px;
+}
+
+.menu.contact-active .socials i {
+  transform: scale(1.6);
+} */
+.header-box {
+    transition: padding 0.4s ease;
+}
+
+.header-box.contact-active {
+    padding: 20px 40px;
+}
+
+.header-box.contact-active .socials i,
+.header-box.contact-active .socials a {
+    transform: scale(1.3);
+    padding: 0 10px;
+}
+
+.menu a:hover,
+.socials a:hover,
+.menu-toggle:hover {
+    color: var(--eye-color);
+    transition: color 0.3s;
+}
+
+.menu a:hover,
+.menu-toggle:hover {
+    color: var(--accent-color);
+    transition: color 0.3s;
+}
+
+.socials .color-1 {
+    color: var(--color-1);
+}
+
+.socials .color-2 {
+    color: var(--color-2);
+}
+
+.socials .color-3 {
+    color: var(--color-3);
+}
+
+.socials .color-4 {
+    color: var(--color-4);
+}
+
+.menu.active {
+    display: flex; 
+}
+
+.menu-toggle {
+    padding: 0px 0px 0px 25px;
+    color: var(--menu-text-color);
+    font-weight: 100;
+    font-size: 20px; 
+    cursor: pointer; 
+    display: none; 
+}
+
+/* .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+} */
+
+/* main {
+    min-height: 100vh;
+    display: flex; 
+    flex-direction: column;
+} */
+
+.content h1,
+.content h3 {
+    display: block;
+}
+
+.content h1,
+.content h3, 
+.content p {
+    color: var(--menu-text-color);
+}
+
+.content h1 {
+    text-wrap-mode: nowrap;
+}
+
+
+.bio {
+    /* margin: 0px 50px; */
+    /* min-height: 70vh; */
+    /* padding: 4rem 0; */
+    /* flex: 1; */
+    display: flex;
+    align-items: center;
+    padding: 2rem 50px;
+}
+
+.testimonials {
+    /* margin: 0px 50px; */
+    /* min-height: 70vh; */
+    /* padding: 4rem 0; */
+    /* flex: 1; */
+    /* display: inline-block; */
+    /* align-items: center; */
+    padding: 2rem 50px;
+}
+
+.box .imgbx img {
+    border-radius: 50%;
+    object-fit: cover;
+    width: 100%;
+    /* width: 100%;
+    max-height: 50vh; */
+}
+
+.worked-with {
+    /* background-color: rgb(209, 209, 209); */
+    background-color: var(--color-grey);
+    width: 80%;
+    margin: 0 auto 30px auto;
+    padding: 20px;
+    border-radius: 16px;
+    overflow: hidden;
+    position: relative;
+}
+
+.companies {
+    overflow: hidden;
+    /* position: relative; */
+
+    /* Edge fade */
+    -webkit-mask-image: linear-gradient(
+        to right,
+        transparent 0%,
+        black 30%,
+        black 70%,
+        transparent 100%
+    );
+    mask-image: linear-gradient(
+        to right,
+        transparent 0%,
+        black 30%,
+        black 70%,
+        transparent 100%
+    );
+
+    position: relative;
+    z-index: 1;
+}
+
+
+
+.companies a {
+    font-size: 40px;
+    /* removing to replace with gradient color effect */
+    color: var(--menu-text-color);
+    text-decoration: none;
+    margin: 0 20px;
+    /* added for scroll effect */
+    /* display: flex; */
+    width: 100%;
+    align-content: center;
+    padding: 10px;
+    transition: transform 0.3s ease, opacity 0.3s ease, filter 0.3s ease;
+}
+
+.companies a:hover {
+    /* transform: scale(1.15);
+    filter: brightness(1.2); */
+
+    opacity: 1;
+    transform: scale(1.15) translateY(-3px);
+    filter: brightness(1.1);
+}
+
+.companies a i {
+    /* transition: transform 0.3s ease, opacity 0.3s ease; */
+    /* color: inherit; */
+    /* color: white; */
+}
+
+.companies:hover a {
+    opacity: 0.4;
+}
+
+.companies a:hover {
+    opacity: 1;
+}
+
+.companies a:hover i {
+    /* transform: scale(1.15); */
+
+    /* filter: brightness(1.2);
+    transform: scale(1.15) translateY(-3px); */
+
+    /* opacity: 1; */
+    /* transform: scale(1.15); */
+}
+
+.scroll-track {
+    will-change: transform;
+    display: flex;
+    gap: 4rem;
+    width: max-content;
+    animation: scroll 60s linear infinite;
+    pointer-events: auto;
+
+    /* -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent; */
+
+    /* background: inherit;     */
+
+    /* mix-blend-mode: multiply; */
+}
+
+.scroll-track:hover {
+    animation-play-state: paused;
+}
+
+.set {
+    display: flex;
+    gap: 4rem;
+    padding-right: 4rem;
+}
+
+@keyframes scroll {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+/* Desktop Res */
+@media (min-width: 951px) {
+
+    body {
+        overflow: hidden;
+    }
+
+    .menu-toggle,
+    .fas.fa-bars {
+        display: none;
+    }
+
+    .bio,
+    .testimonials {
+        flex: 1;
+    }
+
+    .bio .row {
+    display: flex;
+    align-items: center;
+    padding: 2rem 50px;
+
+    /* height: 70vh; */
+    }
+
+    .row {
+        /* gap: 3em;
+        width: 100%;
+        padding: 50px 0px; */
+        gap: 2em;
+        width: 100%;
+        padding: 20px 0px;
+    }
+
+    .row .col50 {
+        width: 100%;
+        padding: 20px 0px;
+    }
+
+    .testimonials .row {
+        /* gap: 3em;
+        width: 100%;
+        padding: 50px 0px; */
+        gap: 2em;
+        width: 100%;
+        padding: 20px 0px;
+    }
+
+    .testimonials .row.col50 {
+        width: 100%;
+        padding: 10px 0px;
+    }
+}
+
+/* Tablet Res */
+@media (max-width: 950px) {
+
+    html, body {
+        font-family: "Nunito", sans-serif;
+        /* background-color: blue; */
+        margin: 0;
+        padding: 0;
+        overflow: auto;
+    }
+
+    .menu-toggle {
+    display: block; 
+    }
+
+    .menu {
+        display: none; 
+        flex-direction: column; 
+        position: absolute; 
+        background-color: white; 
+        top: 60px; 
+        left: 0;
+        right: 0;
+        z-index: 1; 
+        padding: 20px 0; 
+        border-radius: 8px;
+    }
+
+    .menu ul {
+        flex-direction: column; 
+        align-items: center; 
+    }
+
+    .menu li {
+        margin: 10px 0; 
+    }
+  
+    .row {
+        /* gap: 3em;
+        width: 100%;
+        padding: 50px 0px; */
+        gap: 2em;
+        width: 100%;
+        padding: 20px 0px;
+    }
+
+    .row .col50 {
+        width: 100%;
+        padding: 10px 0px;
+    }
+
+    .row .col50 .imgbx {
+        /* height: 50vh; */
+        height: auto;
+    } 
+}
+
+/* Phone Res */
+@media (max-width: 480px) {
+
+    html, body {
+        font-family: "Nunito", sans-serif;
+        /* background-color: purple; */
+        margin: 0;
+        padding: 0;
+    }
+
+    .bio {
+        margin: 0;
+        padding: 30px;
+        /* padding-top: 50px; */
+    }
+
+    .row .col50 .imgbx {
+        padding: 10px;
+        height: auto;
+        /* display: flex; */
+    } 
+
+    .worked-with {
+        padding: 10px;
+        /* margin: 50px; */
+        margin: 20px auto;
+        border-radius: 16px;
+        width: 80%;
+        overflow: hidden;
+        position: relative;
+    }
+}
+
